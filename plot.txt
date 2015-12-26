@@ -1,0 +1,29 @@
+# color definitions
+reset
+set style line 1 lc rgb '#0060ad' lt 1 lw 4 # --- blue
+
+unset key
+unset border
+unset tics
+
+set xrange [-1.5:4.5]
+set yrange [-3:3]
+set size ratio -1
+
+set style rectangle fillstyle noborder
+
+set palette defined (0 "#6699FF", 100 "#FF0000")
+set cbrange [4.0:6.0]
+
+set object 1 rect from 0, 0 to 1,1 front fc rgb "#0fffff" fillstyle solid lw 0
+set object 2 rect from 1, 1 to 2,2 front fc rgb "#ff0ff0" fillstyle solid lw 0
+ 
+
+ 
+ 
+  
+ 
+
+plot '-' w p ls 1
+0 0
+e
