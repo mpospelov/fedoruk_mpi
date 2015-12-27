@@ -95,15 +95,12 @@ int main( int argc, char **argv ){
 
   } else {
     calcTime = atoi(argv[1]);
-    numPoints = atoi(argv[2]);
-
-    int x = sqrt( numPoints / (length * hight) );
-    printf("\n x= %d", x);
-    dx = (double)(length / ( (length * x) -1.0) );
-    dy = (double)(hight / ( (hight * x) -1.0) );
+    long numPointsY = atoi(argv[2]);
+    dx = (double)(length / (numPointsY * length));
+    dy = (double)(hight / (numPointsY * hight));
     printf("\n dx= %f(%f), dy= %f(%f) ",
-      (double)dx, (double)dx*(length*((int)x) -1.0),
-      (double)dy, (double)dy*(hight*((int)x) -1.0) );
+      (double)dx, (double)dx,
+      (double)dy, (double)dy);
 
     printf("\n printf dx= %ld, print dy= %ld", (long)(length/ dx), (long)(hight/ dy));
   }
@@ -112,6 +109,7 @@ int main( int argc, char **argv ){
 
   xPoints = 1 + length/dx;
   yPoints = 1 + hight/dy;
+  numPoints = xPoints * yPoints;
 
   tempMas = make2DArray(xPoints, yPoints);
   tempMasPrev = make2DArray(xPoints, yPoints);

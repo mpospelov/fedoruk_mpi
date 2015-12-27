@@ -1,4 +1,4 @@
 all:
 	mpicc -o mpi4 4mpi.c -lm
 run:
-	mpirun -np 3 ./mpi4 1500 8000
+	mpirun -np 2 ./mpi4 2100 59
